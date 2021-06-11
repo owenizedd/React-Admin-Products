@@ -3,6 +3,7 @@ body{
 }
 .App{
   display: flex;
+  font-family: "Roboto";
 }
 .sidebar{
   background-color: rgb(66, 66, 66);
@@ -21,4 +22,7 @@ a{
 }
 .padding-sidebar{
   padding: 4px;
+}
+
+.home{
 }

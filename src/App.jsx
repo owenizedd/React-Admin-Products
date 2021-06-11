@@ -6,10 +6,13 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText'
-import { makeStyles, useTheme } from '@material-ui/core/styles'; 
+import {
+  List,
+  ListItem,
+  ListItemText,
+  Container
+} from '@material-ui/core';
+
 
 import Home from './pages/Home';
 import Products from './pages/Products';
