@@ -1,0 +1,24 @@
+body{
+  margin: 0;
+}
+.App{
+  display: flex;
+}
+.sidebar{
+  background-color: rgb(66, 66, 66);
+  color: white;
+  position: fixed;
+  height: 100vh;
+  min-width: 180px;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-margin{
+  margin-left: 180px;
+}
+.padding-sidebar{
+  padding: 4px;
+}
