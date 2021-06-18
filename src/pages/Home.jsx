@@ -1,10 +1,29 @@
 import React from 'react'
+
+// Material UI Core
 import {
   Container,
   Typography,
   Box,
-  CssBaseline
+  CssBaseline,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  IconButton,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemText,
+  ListItemSecondaryAction,
+  Avatar,
 } from '@material-ui/core';
+
+// Material UI Icons
+import {
+  ArrowForward,
+  ExpandMore,
+  NotificationsNone
+} from '@material-ui/icons';
 
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
@@ -14,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
   },
 }));
+
 function Home(){
   return(
     <Box className="home" width='100%' >
@@ -57,7 +77,40 @@ function Home(){
       </Container>
 
       <Container className="page-content">
-
+        <Box width="50%">
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMore />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>Events</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box width='100%'>
+                <List>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <NotificationsNone />
+                        </Avatar>
+                      </ListItemAvatar>
+                        <ListItemText 
+                          primary="Artikel 1"
+                          secondary='Deskripsi singkat artikel 1'
+                        />
+                      <ListItemSecondaryAction >
+                        <IconButton edge="end" aria-label="delete">
+                            <ArrowForward/>
+                        </IconButton>
+                      </ListItemSecondaryAction>
+                      
+                    </ListItem>
+                </List>
+              </Box>
+            </AccordionDetails>
+          </Accordion>
+        </Box>
       </Container>
     </Box>
   )
