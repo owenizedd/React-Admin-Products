@@ -1,7 +1,9 @@
 import React from 'react'
 import {
   Container,
-  Typography
+  Typography,
+  Box,
+  CssBaseline
 } from '@material-ui/core';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -14,18 +16,50 @@ const useStyles = makeStyles((theme) => ({
 }));
 function Home(){
   return(
-    <div className="home">
-      <Container>
-        <Typography variant="h4" gutterBottom>
-          Admin Dashboard
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, officia eius. Natus, nemo quia. Placeat hic, illo ex minus earum, velit eum, recusandae pariatur explicabo id molestiae cum vel magni.
-          Quas molestiae veniam eos reprehenderit nobis possimus, ab vero labore autem hic obcaecati consectetur in sint neque dolorem modi aliquid molestias inventore similique porro nihil commodi omnis mollitia. Maxime, animi!
-          Fuga sapiente deserunt commodi maiores dicta labore est quisquam facere corrupti. Ea quis iusto veritatis dolorum, voluptate blanditiis distinctio sunt, cupiditate mollitia assumenda exercitationem iure facere dignissimos. Quia, molestias animi!
-        </Typography>
+    <Box className="home" width='100%' >
+      <CssBaseline/>
+      <Container className="page-header">
+        <Box bgcolor="info.main" color="info.contrastText" p={2}>
+          <Typography variant="h5" gutterBottom>
+            <Box fontWeight={500}>
+              Hello, Admin!
+            </Box>
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            I hope you are having a great day!
+          </Typography>
+        </Box>
       </Container>
-    </div>
+        
+      <Container className="page-summary">
+        <Box display="flex">
+          <Box  width={110} py={2} px={4} m={1} boxShadow={2} borderRadius={3} bgcolor="white"> 
+            <Typography>
+              <Box variant="h6" textAlign="center" fontWeight={500}>
+                500
+              </Box>
+              <Box variant="p" textAlign="center" fontSize={12} fontWeight={400} color="grey.600">
+                Users
+              </Box>
+            </Typography>
+          </Box>
+          <Box width={110} py={2} px={4} m={1} boxShadow={2} borderRadius={3} bgcolor="white"> 
+            <Typography>
+              <Box variant="h6" textAlign="center" fontWeight={500}>
+                856
+              </Box>
+              <Box variant="p" textAlign="center" fontSize={12} fontWeight={400} color="grey.600">
+                Products
+              </Box>
+            </Typography>
+          </Box>
+        </Box>
+      </Container>
+
+      <Container className="page-content">
+
+      </Container>
+    </Box>
   )
 }
 

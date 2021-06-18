@@ -6,11 +6,11 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
 import {
   List,
   ListItem,
   ListItemText,
-  Container
 } from '@material-ui/core';
 
 
@@ -44,7 +44,7 @@ function App() {
                   <ListItem button>
                     {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
                     
-                    <ListItemText primary={item.name} />
+                    <ListItemText primary={item.name}  />
                   </ListItem>
                 </Link>
               ))
